@@ -22,9 +22,8 @@ class Main{
 				Matcher m2=r2.matcher(line);
 
 				if (m1.find( )) {
-					hm.put(m1.group(2),new node(Integer.parseInt(m1.group(4))));
-		         System.out.println("Found value: " + m1.group(2) );
-		         System.out.println("Found value: " + m1.group(4) );
+					Node A=new Node(Integer.parseInt(m1.group(4)));
+					hm.put(m1.group(2),A);
 		      	}
 		      	else if(m2.find( )){
 		      		System.out.println("Found value: " + m2.group(0) );

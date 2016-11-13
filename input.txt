@@ -1,0 +1,25 @@
+#saturday 5
+#sunday 3
+#saturday 10
+#monday 2
+#reading 4
+#playinggames 2
+#saturday 6
+#sunday 8
+#friday 2
+#tuesday 2
+#saturday 12
+#sunday 11
+#monday 6
+3
+#saturday 12
+#monday 2
+#stop 3
+#playing 4
+#reading 15
+#drawing 3
+#friday 12
+#school 6
+#class 5
+5
+stop

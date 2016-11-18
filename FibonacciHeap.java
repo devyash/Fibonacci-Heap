@@ -52,7 +52,31 @@ public class FibonacciHeap
     //performs cut operation. Cuts x from y
     public void cut(Node x, Node y)
     {
-       
+        // removes x from child of y and decreases the degree of y
+        x.left.right = x.right;
+        x.right.left = x.left;
+        y.degree--;
+
+        // reset y.child if necessary
+        if (y.child == x) {
+            y.child = x.right;
+        }
+
+        if (y.degree == 0) {
+            y.child = null;
+        }
+
+        // add x to root list of heap
+        x.left = maxNode;
+        x.right = maxNode.right;
+        maxNode.right = x;
+        x.right.left = x;
+
+        // set parent of x to nil
+        x.parent = null;
+
+        // set mark to false
+        x.mark = false;
     }
 
     //Performs cascading cut on the given node as given in Cormen 
@@ -63,8 +87,8 @@ public class FibonacciHeap
         //if there is a parent
         if (x != null) {
             // if y is unmarked, set it marked
-            if (!y.childCut) {
-                y.childCut = true;
+            if (!y.mark) {
+                y.mark = true;
             } else {
                 // it's marked, cut it from parent
                 cut(y, x);
@@ -273,8 +297,8 @@ public class FibonacciHeap
         // increase degree of x by 1
         x.degree++;
 
-        // make childCut of y as false
-        y.childCut = false;
+        // make mark of y as false
+        y.mark = false;
     }
 
 }

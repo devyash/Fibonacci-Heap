@@ -53,7 +53,7 @@ public class hashtagcounter {
                     //Check if it contains the key
                 if ( !hm.containsKey(hashTag))
                 {
-                        //Create new node and insert in fibonacci heap and hashTag map
+                        //Create new node and insert in fibonacci heap and hash map
                     Node node = new Node(hashTag,key);
                     fh.insert(node);
                     hm.put(hashTag,node);
@@ -138,7 +138,7 @@ public class hashtagcounter {
         }
     }
 
-      //Print the time required
+        //Print the time required
     long endTime   = System.currentTimeMillis();
     long totalTime = endTime - startTime;
     System.out.println(" Total Time in milli seconds: "+ totalTime);

@@ -9,23 +9,23 @@ public class Node
 {
         Node left, right, child, parent;
         int degree = 0;       
-        boolean childCut = false; 
-        private String hashTag;
+        boolean mark = false; 
+        private String hash;
         int key;
 
-        Node(String hashTag,int key)
+        Node(String hash,int key)
         {
            this.left = this;
            this.right = this;
            this.parent = null;
            this.degree = 0;
-           this.hashTag = hashTag;
+           this.hash = hash;
            this.key = key;
 
         }
 
         public  String  getHashTag(){
-            return this.hashTag;
+            return this.hash;
         }
 
     }

@@ -1,27 +1,31 @@
+// Author: Devyash Sanghai
+// Date: November 16th, 2016
+// devyashsanghai@gmail.com
+
+
+
+//contains the Node class for creating the node object
 public class Node
-    {
+{
+        Node left, right, child, parent;
+        int degree = 0;       
+        boolean childCut = false; 
+        private String hashTag;
+        int key;
 
-        public int key;
-        public Node parent;
-        public Node child;
-        public Node previous;
-        public Node next; 
-        public int degree =0;
-        public boolean isChildCut = false;
-        
-        
-
-        public Integer getKey()
+        Node(String hashTag,int key)
         {
-            
-            return key;
+           this.left = this;
+           this.right = this;
+           this.parent = null;
+           this.degree = 0;
+           this.hashTag = hashTag;
+           this.key = key;
+
         }
 
-        public Node(Integer keyval)
-        {
-            next = previous = this;
-            key = keyval;
+        public  String  getHashTag(){
+            return this.hashTag;
         }
-
 
     }

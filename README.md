@@ -22,3 +22,15 @@ A Fibonacci heap is a data structure for priority queue operations, consisting o
 - Delete Max	O(log n)
 - Increase Key	O(1)
 - Merge	O(1)
+
+
+##COMPILING & RUNNING INSTRUCTIONS
+
+
+The project has been compiled and tested on thunder.cise.ufl.edu and java compiler on local machine.
+To execute the program,
+You can remotely access the server using ssh username@thunder.cise.ufl.edu
+For running the Hash Tag Counter
+-	Extract the contents of the zip file
+-	Type ‘make’ without the quotes.
+-	Type ‘java hashtagcounter ‘file path/input_file_name.txt’ ’ without the quotes and add the file name and pathI’ve included the file sampleInput.txt . 
